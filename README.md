@@ -70,20 +70,6 @@ Admins are not hardcoded and not manually assigned via DB.
 
 ✅ Service Layer Approach
 
-A boolean flag or method like registerAdmin() is used.
-
-If roleAdmin = true → user is saved with ROLE_ADMIN
-
-Otherwise → default role is ROLE_USER
-
-Example Logic (Concept)
-if (roleAdmin) {
-    userRoles.add(ROLE_ADMIN);
-} else {
-    userRoles.add(ROLE_USER);
-}
-
-
 ✔️ This ensures:
 
 Secure role assignment
@@ -94,20 +80,13 @@ Same StudentEntity used for both roles
 
 🛠️ Tech Stack
 Layer	Technology
-Backend	Spring Boot 3.x
+Backend	Spring Boot 4.0
 Frontend	Thymeleaf + Bootstrap 5
 Database	PostgreSQL
 Security	Spring Security (Role-Based Access)
-IDE	IntelliJ / Eclipse
+Spring Tool Suit
 🗃️ Database Setup (PostgreSQL)
-1️⃣ Create Database
-CREATE DATABASE course_enroll;
-
-2️⃣ Create Tables
-
-Use the schema.sql file provided in the repository.
-
-3️⃣ Configure Database Connection
+1️⃣  Configure Database Connection
 
 src/main/resources/application.properties
 
@@ -118,7 +97,7 @@ spring.jpa.hibernate.ddl-auto=update
 
 🚀 How to Run the Project
 
-1️⃣ Import project into IntelliJ / Eclipse
+1️⃣ Import project into IntelliJ / Eclipse /STS
 2️⃣ Ensure PostgreSQL is running
 3️⃣ Update application.properties
 4️⃣ Run Spring Boot application
